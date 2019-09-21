@@ -96,6 +96,7 @@ public class SeckillServiceImpl extends ServiceImpl<SeckillItemDao, SeckillItem>
         return RUtil.setOK("ok",map);
     }
 
+    // 进行秒杀操作
     @Override
     public R buySeckillItem(Integer id) {
 
