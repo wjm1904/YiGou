@@ -58,7 +58,7 @@ public class SeckillController {
      * @param id
      * @return
      */
-    @GetMapping("/controller/seckill/buySeckillItem.do")
+    @PostMapping("/controller/seckill/buySeckillItem.do")
     public String  buySeckillItem(Integer id) {
        
         seckillItemService.buySeckillItem(id);
