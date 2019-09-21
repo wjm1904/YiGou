@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>YiGou_Common</module>
+        <module>YiGou_OrderSupply</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
