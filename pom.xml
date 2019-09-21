@@ -6,6 +6,7 @@
     <modules>
         <module>YiGou_Common</module>
         <module>YiGou_Seckill</module>
+        <module>YiGou_Item</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
