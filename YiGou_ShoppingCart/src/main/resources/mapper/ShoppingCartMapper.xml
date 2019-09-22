@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.wy.shop.dao.ShopDao">
+
+    <insert id="addItemById" parameterType="int">
+        insert into tb_shoppingcart(item_id) values(#{id})
+    </insert>
+    
+    <select id="findItemByUid" parameterType="int" resultType="com.qfedu.wy.shop.entity.Item">
+select it.* from tb_item it
+inner join tb_user tu
+inner join tb_shoppingcart ts
+on tu.id = ts.id
+where tu.id= #{id}
+    </select>
+    
+    <select id="findInfoByItemId" parameterType="int" resultType="com.qfedu.wy.shop.entity.Item">
+        select * from tb_item where id = #{id}
+    </select>
+    
+    <delete id="delItemById" parameterType="int">
+        delete from tb_shoppingcart where item_id = #{itemId}
+    </delete>
+    
+    <delete id="delBatch" parameterType="list">
+        delete from tb_shoppingcart where item_id in 
+        <foreach collection="list" item="itemId" open="(" close=")" separator=",">
+            #{itemId}
+        </foreach> 
+    </delete>
+
+</mapper>

@@ -11,8 +11,10 @@ import com.qfedu.wy.seckill.service.SeckillItemService;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -30,7 +32,9 @@ public class SeckillServiceImpl extends ServiceImpl<SeckillItemDao, SeckillItem>
     
     private ConcurrentHashMap<String,Boolean> overMap = new ConcurrentHashMap<>();
     
-    @Autowired(required = false)
+  
+    
+    @Resource
     private SeckillItemDao seckillItemDao;
 
     @Autowired

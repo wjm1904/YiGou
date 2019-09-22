@@ -8,7 +8,9 @@
         <module>YiGou_OrderSupply</module>
         <module>YiGou_Seckill</module>
         <module>YiGou_Item</module>
+        <module>YiGou_ShoppingCart</module>
         <module>YiGou_Server</module>
+        <module>YIGo_Pictures</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

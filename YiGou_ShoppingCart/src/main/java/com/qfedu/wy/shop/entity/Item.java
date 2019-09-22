@@ -1,17 +1,18 @@
-package com.breeze.yigo.item.entity;
+package com.qfedu.wy.shop.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@TableName("tb_item")
+/**
+ * Created by   Intellif Idea 2019.09
+ * Author:  Wang Yun
+ * Date:    2019-09-22
+ * Time:    0:16
+ */
 @Data
 public class Item {
-    @TableId(type = IdType.AUTO)
+    
     private Long id;
     private String title;
     private String sellPoint;
