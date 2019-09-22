@@ -29,7 +29,7 @@ public class Order extends Model<Order> {
      * 订单id
      */
     @TableId(value = "orderId",type = IdType.AUTO)
-    private Integer orderId;
+    private Integer id;
 
     /**
      * 实付金额。精确到2位小数;单位:元。如:200.07，表示:200元7分

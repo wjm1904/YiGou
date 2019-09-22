@@ -15,64 +15,42 @@ import java.util.Date;
  * 
  * </p>
  *
- * @author wjm
+ * @author Feri
  * @since 2019-09-21
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("tb_order_shipping")
-public class OrderShipping extends Model<OrderShipping> {
+@TableName("tb_user")
+public class User extends Model<User> {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 订单ID
-     */
     @TableId(value = "id", type = IdType.AUTO)
-    private String id;
+    private Long id;
 
     /**
-     * 收货人全名
+     * 用户名
      */
-    private String receiverName;
+    private String username;
 
     /**
-     * 固定电话
+     * 密码，加密存储
      */
-    private String receiverPhone;
+    private String password;
 
     /**
-     * 移动电话
+     * 注册手机号
      */
-    private String receiverMobile;
+    private String phone;
 
     /**
-     * 省份
+     * 注册邮箱
      */
-    private String receiverState;
-
-    /**
-     * 城市
-     */
-    private String receiverCity;
-
-    /**
-     * 区/县
-     */
-    private String receiverDistrict;
-
-    /**
-     * 收货地址，如：xx路xx号
-     */
-    private String receiverAddress;
-
-    /**
-     * 邮政编码,如：310001
-     */
-    private String receiverZip;
+    private String email;
 
     private Date created;
 
     private Date updated;
+
 }

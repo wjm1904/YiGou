@@ -3,7 +3,6 @@ package com.wjm.yigou.order.supply;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
@@ -15,7 +14,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @Version:
  * @Description:
  */
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)  //开关类
+@SpringBootApplication  //开关类
 @EnableDiscoveryClient  //注册服务
 @MapperScan("com.wjm.yigou.order.supply.dao")   //扫描dao层
 public class OrderSupplyApplication {

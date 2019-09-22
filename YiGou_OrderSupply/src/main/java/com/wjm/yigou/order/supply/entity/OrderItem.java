@@ -61,4 +61,9 @@ public class OrderItem extends Model<OrderItem> {
      * 商品图片地址
      */
     private String picPath;
+
+    /**
+     * 商品的商家名称
+     */
+    private String merchant;
 }
