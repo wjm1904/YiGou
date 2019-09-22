@@ -5,9 +5,11 @@
     <packaging>pom</packaging>
     <modules>
         <module>YiGou_Common</module>
+        <module>YiGou_OrderSupply</module>
         <module>YiGou_Seckill</module>
         <module>YiGou_Item</module>
         <module>YiGou_ShoppingCart</module>
+        <module>YiGou_Server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
