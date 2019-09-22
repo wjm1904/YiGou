@@ -7,6 +7,8 @@ import com.qf.common.vo.R;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +20,7 @@ public class ItemParamController {
     @Autowired
     ItemParamService itemParamService;
 
+    @PostMapping("/admin/itemparam/insert.do")
     public R insertByCid(@RequestParam Long cid,@RequestParam String paramdata){
         ItemParam itemParam = new ItemParam();
         itemParam.setItemCarId(cid);
@@ -25,5 +28,11 @@ public class ItemParamController {
         itemParam.setCreated(new Date());
         itemParam.setUpdated(new Date());
         return RUtil.setR(itemParamService.save(itemParam),"添加规格成功");
+    }
+
+    @GetMapping("/nolog/provider/itemparam/query.do")
+    public R queryByItemId(@RequestParam Long itemId){
+        ItemParam byId = itemParamService.getById(itemId);
+        return RUtil.setOK("查询规格参数成功",byId);
     }
 }
