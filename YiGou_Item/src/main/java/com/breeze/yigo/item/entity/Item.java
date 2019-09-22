@@ -17,7 +17,7 @@ public class Item {
     private String sellPoint;
     private Long price;
     private Integer num;
-    private String img;
+    private String image;
     private Long cid;
     private Integer status;
     private Date created;
