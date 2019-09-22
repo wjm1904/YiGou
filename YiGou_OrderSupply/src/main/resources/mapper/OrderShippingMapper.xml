@@ -5,4 +5,13 @@
     <select id="findAll" resultType="com.wjm.yigou.order.supply.entity.OrderShipping">
         select * from yigo.tb_order_shipping
     </select>
+
+    <update id="updateOrderShipping">
+        update yigo.tb_order_shipping set receiver_address=#{receiverAddress},
+        receiver_city=#{receiverCity},receiver_district=#{receiverDistrict},
+        receiver_mobile=#{receiverMobile},receiver_name=#{receiverName},
+        receiver_phone=#{receiverPhone},receiver_state=#{receiverState}
+        where id=#{id}
+
+    </update>
 </mapper>

@@ -1,6 +1,7 @@
 package com.wjm.yigou.order.supply.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.qf.common.vo.R;
 import com.wjm.yigou.order.supply.entity.OrderShipping;
 
 
@@ -15,4 +16,5 @@ import com.wjm.yigou.order.supply.entity.OrderShipping;
  */
 public interface OrderShippingService extends IService<OrderShipping> {
 
+    R updateOrderShipping(OrderShipping orderShipping);
 }

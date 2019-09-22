@@ -16,4 +16,6 @@ import java.util.List;
  */
 public interface OrderShippingDao extends BaseMapper<OrderShipping> {
     List<OrderShipping> findAll();
+
+    int updateOrderShipping(OrderShipping orderShipping);
 }

@@ -30,7 +30,7 @@ public class OrderShipping extends Model<OrderShipping> {
      * 订单ID
      */
     @TableId(value = "id", type = IdType.AUTO)
-    private String id;
+    private Integer id;
 
     /**
      * 收货人全名
@@ -67,12 +67,4 @@ public class OrderShipping extends Model<OrderShipping> {
      */
     private String receiverAddress;
 
-    /**
-     * 邮政编码,如：310001
-     */
-    private String receiverZip;
-
-    private Date created;
-
-    private Date updated;
 }
