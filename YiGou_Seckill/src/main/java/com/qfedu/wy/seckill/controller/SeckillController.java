@@ -58,6 +58,7 @@ public class SeckillController {
      * @param id
      * @return
      */
+    @ApiOperation(value = "进行秒杀操作",notes = "秒杀商品")
     @PostMapping("/controller/seckill/buySeckillItem.do")
     public String  buySeckillItem(Integer id) {
        

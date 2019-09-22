@@ -13,7 +13,17 @@ import java.util.List;
  * Time:    11:16
  */
 public interface SeckillItemDao extends BaseMapper<SeckillItem> {
+    /**
+     * wy
+     * 查询所有商品
+     * @return
+     */
     List<SeckillItem> listAllItem();
-    
+
+    /**
+     * wy
+     * 根据id查询单个商品信息
+     * @param id
+     */
     void updateStock(Integer id);
 }
